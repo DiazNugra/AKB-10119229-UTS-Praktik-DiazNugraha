@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/panahKembaliMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_panah_kembali">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/judulForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/judulForm"
+            android:layout_below="@+id/panahKembaliMain"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/black">
+
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/relativeInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/judulForm"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ic_bg_info"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/info"
+                android:layout_marginTop="10dp"
+                android:text="@string/deskInfo"
+                android:textSize="14dp">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeJenisTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeInfo"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:id="@+id/jenisTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jenisTes"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/radioJenisTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jenisTest"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_rapid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rapid Antigen"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_pcr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PCR"
+                    android:textSize="18sp" />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeTanngalKonfir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeJenisTest"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:id="@+id/tanggalKonfir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tanggalTerkonfir"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/editTanggalKonfir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tanggalKonfir"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_button_ubah"
+                android:padding="10dp">
+
+            </EditText>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeNik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeTanngalKonfir"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:id="@+id/nik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nik"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/editNik"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nik"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_button_ubah"
+                android:padding="10dp">
+
+            </EditText>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeNik"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:id="@+id/nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nama"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/editNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nama"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_button_ubah"
+                android:padding="10dp">
+
+            </EditText>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeTanggalLahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeNama"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:id="@+id/tanggalLahir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tglLahir"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/editTanggalLahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tanggalLahir"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_button_ubah"
+                android:padding="10dp">
+
+            </EditText>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeJK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeTanggalLahir"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:id="@+id/jk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jk"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/radioJenisKelamin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jk"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_laki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Laki - laki"
+                    android:textSize="18sp"/>
+
+                <RadioButton
+                    android:id="@+id/radio_perempuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perempuan"
+                    android:textSize="18sp"/>
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeHubungan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeJK"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:id="@+id/hubungan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hub"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/radioHubungan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hubungan"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_orangtua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Orangtua"
+                    android:textSize="18sp"/>
+
+                <RadioButton
+                    android:id="@+id/radio_sutri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Suami/Istri"
+                    android:textSize="18sp"/>
+
+                <RadioButton
+                    android:id="@+id/radio_anak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Anak"
+                    android:textSize="18sp"/>
+
+                <RadioButton
+                    android:id="@+id/radio_lain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kerabat Lainnya"
+                    android:textSize="18sp"/>
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeTerm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeHubungan"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/term"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <CheckBox android:id="@+id/checkbox_meat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/term"/>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/lanjut1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_button"
+                android:layout_below="@id/term"
+                android:layout_marginTop="25dp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/lanjut"
+                android:textColor="@color/white">
+
+            </androidx.appcompat.widget.AppCompatButton>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>
